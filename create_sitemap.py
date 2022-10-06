@@ -4,7 +4,7 @@ import requests, time, os, datetime
 
 def ask_for_url():
     global url
-    url=input('Enter your domain here')
+    url=input('Enter your domain here:')
     try:
         global response
         checking =url[-1] # Getting the last character ofthe string (URL)
@@ -77,7 +77,7 @@ def crawling_web_pages():
                         print(checked_links[control])# Display the current Url
                         control+=1         
             else:
-                print('links are more then 50000')
+                print('links are more then 50000.')
         except :
             control+=1 
     else:
@@ -100,7 +100,7 @@ def create_sitemap():
     else:
         tree= ET.ElementTree(urlset)
         tree.write('sitemap.xml')
-        print('your sitemap is ready')
+        print('your sitemap is ready.')
         
                      
 ask_for_url()        
